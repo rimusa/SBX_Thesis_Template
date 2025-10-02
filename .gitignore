@@ -1,5 +1,13 @@
 # LaTeX helper files
-main.aux
-main.fdb_latexmk
-main.fls
-main.log
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.bbl
+*.bcf
+*.bcf-SAVE-ERROR
+*.blg
+*.synctex.gz
+*.xdv
+*.run.xml
+main.pdf
