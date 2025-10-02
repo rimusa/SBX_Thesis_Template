@@ -1,0 +1,54 @@
+% Note that you need to use LuaLaTeX for this to even compile
+\documentclass[11pt,a4paper]{DL}
+
+
+% This lets us offload the preamble so our working space is cleaner
+\usepackage{import}
+
+% Write the paths to your folders here
+\newcommand{\PreamblePath}{./00_Preamble}  % We don't want the preamble to clutter everything
+\newcommand{\PartsPath}{./01_Parts}
+
+
+% These are packages that Ricardo uses all of the time and that he considers useful to add by default
+% Feel free to modify it if it doesn't suit your needs
+% You can find the latest version of this file here:
+% https://github.com/rimusa/useful_stuff/blob/main/latex/packages.tex
+\import{\PreamblePath}{boilerplate-packages}
+
+
+% Additional packages should be added either below or in the imported file
+\import{\PreamblePath}{imported-packages}
+
+
+% Special variables for your thesis
+% You'll need to modify this file to set your name, the title of the thesis, etc.
+\import{\PreamblePath}{thesis-variables}
+
+
+% Import your bib files here
+\import{\PreamblePath}{bib-files}
+
+
+% Here we finally begin the document
+\begin{document}
+
+\maketitle
+\frontmatter
+
+
+% Everything in the thesis lives in wrapper files, found in the 01_Parts folder
+% They should let you work on individual parts of your thesis without having to think of the others
+% They assume your thesis is roughly separarated as follows:
+%  - Preface
+%  - Kappa
+%  - Papers
+%  - Appendices
+
+\input{01_Parts/kappa}
+
+
+
+
+
+\end{document}
