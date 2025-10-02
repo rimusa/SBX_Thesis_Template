@@ -10,4 +10,9 @@
 *.synctex.gz
 *.xdv
 *.run.xml
+
+# We don't want to sync unnecessary PDF files
 main.pdf
+
+# System files
+.DS_Store
