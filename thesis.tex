@@ -33,23 +33,38 @@
 % Here we finally begin the document
 \begin{document}
 
-\maketitle
-\frontmatter
-
-
 % Everything in the thesis lives in wrapper files, found in the 01_Parts folder
 % They should let you work on individual parts of your thesis without having to think of the others
 % They assume your thesis is roughly separarated as follows:
+%  - Title Pages
 %  - Preface
+%  - Index
 %  - Kappa
 %  - Papers
 %  - Appendices
+%  - Bibliography
+
+\maketitle
+\frontmatter
 
 \input{01_Parts/preface}
+
+\tableofcontents
+\mainmatter
+
 \input{01_Parts/kappa}
 
+\input{01_Parts/papers}
 
 
-
+% We print the bibliography *after* the appendices
+% This bit of code comes from Felix
+\defbibnote{referencedoc}{\markboth{References}{References}}
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\numberline{}\refname}
+\markboth{\refname}{\refname}
+\extramarks{\refname}{\refname}
+\chptitle{\refname}
+\printbibliography[title={References}, prenote=referencedoc]
 
 \end{document}
