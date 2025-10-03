@@ -7,9 +7,10 @@
 *.bcf
 *.bcf-SAVE-ERROR
 *.blg
-*.synctex.gz
 *.xdv
 *.run.xml
+*.synctex*
+*.toc
 
 # We don't want to sync unnecessary PDF files
 main.pdf
