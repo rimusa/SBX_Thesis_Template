@@ -3,9 +3,8 @@
 *.fdb_latexmk
 *.fls
 *.log
-*.bbl
-*.bcf
-*.bcf-SAVE-ERROR
+*.bbl*
+*.bcf*
 *.blg
 *.xdv
 *.run.xml
