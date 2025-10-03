@@ -60,14 +60,7 @@
 
 
 % We print the bibliography *after* the appendices
-% This bit of code comes from Felix
-\defbibnote{referencedoc}{\markboth{References}{References}}
-\cleardoublepage
-\addcontentsline{toc}{chapter}{\numberline{}\refname}
-\markboth{\refname}{\refname}
-\extramarks{\refname}{\refname}
-\chptitle{\refname}
-\printbibliography[title={References}, prenote=referencedoc]
+\input{01_Parts/bibliography}
 
 \backmatter
 

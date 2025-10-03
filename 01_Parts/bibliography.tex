@@ -1,0 +1,10 @@
+% Modified from Felix's code
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\numberline{}\refname}
+\markboth{\refname}{\refname}
+\extramarks{\refname}{\refname}
+\chptitle{\refname}
+
+% When we're using bibtex
+\defbibnote{referencedoc}{\markboth{\refname}{\refname}}
+\printbibliography[title={References}, prenote=referencedoc]
