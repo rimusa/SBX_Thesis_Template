@@ -45,6 +45,10 @@
     url=false,
   ]{biblatex}
 
+% This was not defined anywhere before
+\RequirePackage{xcolor}
+\definecolor{lsDOIGray}{cmyk}{0,0,0,0.45}
+
 \setlength\paperwidth{165mm}
 \setlength\paperheight{242mm}
 %\RequirePackage[cam,a4,center]{crop}
